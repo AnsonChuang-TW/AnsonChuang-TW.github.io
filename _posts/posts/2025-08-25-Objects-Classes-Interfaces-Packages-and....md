@@ -24,6 +24,5 @@ An object is a software bundle of related state and behavior.
 Identifying the state and behavior for real-world objects is a great way to begin thinking in terms of object-oriented programming.
 
 ### Software objects
-
-[Open: Pasted image 20250825152245.png](assets/img/image/8f869f9c1fe78aa35ab9e296fb860514_MD5.jpeg)
+[Open: Pasted image 20250825152737.png](assets/img/image/8f869f9c1fe78aa35ab9e296fb860514_MD5.jpeg)
 ![](assets/img/image/8f869f9c1fe78aa35ab9e296fb860514_MD5.jpeg)
