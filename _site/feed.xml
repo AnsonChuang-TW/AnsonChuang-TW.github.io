@@ -1,0 +1,141 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Anson's Code Blog</title>
+  <subtitle>A Boring Blog about Coding roadmap.</subtitle>
+  <updated>2025-08-25T13:36:10+08:00</updated>
+  <author>
+    <name>Anson Chaung</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 Anson Chaung </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Java-basic</title>
+    <link href="http://localhost:4000/posts/Java-basic/" rel="alternate" type="text/html" title="Java-basic" />
+    <published>2025-08-25T13:19:07+08:00</published>
+  
+    <updated>2025-08-25T13:19:07+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Java-basic/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Java-basic/" />
+    <author>
+      <name>Anson Chaung</name>
+    </author>
+
+  
+    
+    <category term="Java" />
+    
+  
+
+  <summary>2025-08-25-Java-basic  Java 簡介  Java 歷史 創立    Java 最初由 Sun Microsystems 的 James Gosling, Mike Sheridan 和 Patrick Naughton 於 1991 年啟動的一個名為”Oak”的專案所開發。     特性      物件導向：Java 是一種物件導向程式語言，支援封裝、繼承和多態。   平台獨立性：透過 Java 虛擬機器 (JVM) 實現，編譯後的 Java 位元組碼可以在任何安裝了 JVM 的平台上執行。   自動記憶體管理：透過垃圾回收機制自動管理記憶體，減少記憶體洩漏和懸空指標的問題。   安全性：提供位元組碼驗證、安全管理器等機制來增強應用程式的安全性。   多執行緒：內建對多執行緒的支援，可以開發高併發的應用程式。   豐富的 API：提供大量的標準函式庫，涵蓋網路...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>test</title>
+    <link href="http://localhost:4000/posts/test/" rel="alternate" type="text/html" title="test" />
+    <published>2025-08-25T13:18:25+08:00</published>
+  
+    <updated>2025-08-25T13:18:25+08:00</updated>
+  
+    <id>http://localhost:4000/posts/test/</id>
+    <content type="text/html" src="http://localhost:4000/posts/test/" />
+    <author>
+      <name>Anson Chaung</name>
+    </author>
+
+  
+    
+    <category term="Java" />
+    
+  
+
+  <summary>2025-08-25-test</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Java</title>
+    <link href="http://localhost:4000/posts/Java/" rel="alternate" type="text/html" title="Java" />
+    <published>2025-08-25T13:17:27+08:00</published>
+  
+    <updated>2025-08-25T13:17:27+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Java/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Java/" />
+    <author>
+      <name>Anson Chaung</name>
+    </author>
+
+  
+    
+  
+
+  <summary>2025-08-25-Java</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Second Post</title>
+    <link href="http://localhost:4000/posts/Second-Post/" rel="alternate" type="text/html" title="Second Post" />
+    <published>2025-08-25T12:11:00+08:00</published>
+  
+    <updated>2025-08-25T12:15:08+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Second-Post/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Second-Post/" />
+    <author>
+      <name>Anson Chaung</name>
+    </author>
+
+  
+    
+    <category term="tutorials" />
+    
+  
+
+  <summary>Heading 1  This is some text to work with  Heading 2 Just a little bit smaller  How about more?  Ordered lists    lists   are   cool      One   Two   Three   New-Item index.html</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>First Post</title>
+    <link href="http://localhost:4000/posts/First-Post/" rel="alternate" type="text/html" title="First Post" />
+    <published>2025-08-25T11:29:00+08:00</published>
+  
+    <updated>2025-08-25T11:29:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/First-Post/</id>
+    <content type="text/html" src="http://localhost:4000/posts/First-Post/" />
+    <author>
+      <name>Anson Chaung</name>
+    </author>
+
+  
+    
+    <category term="tutorials" />
+    
+  
+
+  <summary>Heading 1  This is some text to work with  Heading 2 Just a little bit smaller  How about more?  Ordered lists    lists   are   cool      One   Two   Three   New-Item index.html</summary>
+
+  </entry>
+
+</feed>
+
+
