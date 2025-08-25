@@ -25,3 +25,9 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+
+# Obsidian and template files in _posts
+_posts/templates/
+_posts/drafts/
+_posts/.obsidian/
+_posts/assets/

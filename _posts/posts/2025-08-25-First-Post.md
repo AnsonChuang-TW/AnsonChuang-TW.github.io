@@ -21,3 +21,7 @@ Ordered lists
 1. One
 2. Two
 3. Three
+
+```powershell
+New-Item index.html
+```
