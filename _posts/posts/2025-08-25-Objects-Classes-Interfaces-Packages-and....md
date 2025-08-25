@@ -25,3 +25,6 @@ Identifying the state and behavior for real-world objects is a great way to begi
 
 ### Software objects
 ![01_object.png](https://raw.githubusercontent.com/AnsonChuang-TW/my-imgur/main/01_object.png)
+
+#### Bycicle's object
+![02_bicycle.png](https://raw.githubusercontent.com/AnsonChuang-TW/my-imgur/main/02_bicycle.png)
