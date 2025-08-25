@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Anson's Code Blog</title>
   <subtitle>A Boring Blog about Coding roadmap.</subtitle>
-  <updated>2025-08-25T13:46:16+08:00</updated>
+  <updated>2025-08-25T13:49:59+08:00</updated>
   <author>
     <name>Anson Chaung</name>
     <uri>http://localhost:4000/</uri>
@@ -94,7 +94,7 @@
     <link href="http://localhost:4000/posts/Second-Post/" rel="alternate" type="text/html" title="Second Post" />
     <published>2025-08-25T12:11:00+08:00</published>
   
-    <updated>2025-08-25T12:15:08+08:00</updated>
+    <updated>2025-08-25T12:11:00+08:00</updated>
   
     <id>http://localhost:4000/posts/Second-Post/</id>
     <content type="text/html" src="http://localhost:4000/posts/Second-Post/" />
