@@ -1,0 +1,183 @@
+---
+title: Java-basic
+date: 2025-08-25 13:19:07 +0800
+categories:
+  - Java
+tags:
+  - Java
+---
+
+# 2025-08-25-Java-basic
+
+## Java 簡介
+
+### Java 歷史
+#### 創立
+- Java 最初由 Sun Microsystems 的 James Gosling, Mike Sheridan 和 Patrick Naughton 於 1991 年啟動的一個名為"Oak"的專案所開發。
+#### 特性
+- **物件導向**：Java 是一種物件導向程式語言，支援**封裝**、**繼承**和**多態**。
+- **平台獨立性**：透過 Java 虛擬機器 (JVM) 實現，編譯後的 Java 位元組碼可以在任何安裝了 JVM 的平台上執行。
+- **自動記憶體管理**：透過垃圾回收機制**自動**管理記憶體，減少記憶體洩漏和懸空指標的問題。
+- **安全性**：提供位元組碼驗證、安全管理器等機制來增強應用程式的安全性。
+- **多執行緒**：內建對多執行緒的支援，可以開發高併發的應用程式。
+- **豐富的 API**：提供大量的標準函式庫，涵蓋網路、I/O、資料庫連接、圖形介面等多個方面。
+- **簡單性**：相較於 C++ 等語言，Java 語法更為簡潔易學。
+
+### Java 版本（請簡介Java SE和Java EE差別）
+- **Java SE (Standard Edition)**：
+  - 提供 Java 程式語言的核心功能。
+  - 用於開發桌面應用程式、伺服器端應用程式以及基本的 Web 應用程式。
+  - 包含了 Java 語言規範、Java 虛擬機器 (JVM) 以及核心應用程式介面 (API)，如基本型別、物件、網路、安全性、資料庫存取、圖形化使用者介面 (GUI) 開發和 XML 解析等。
+  - 是所有 Java 平台的基礎。
+- **Java EE (Enterprise Edition)** / **Jakarta EE**：
+  - 建構在 Java SE 之上，專為開發和執行大型、多層次、可擴展、可靠且安全的網路應用程式而設計。
+  - 提供額外的 API 和執行環境，用於企業級應用，例如 Servlet、JavaServer Pages (JSP)、Enterprise JavaBeans (EJB)、Java Message Service (JMS) 等。
+  - 適用於開發 Web 服務、分散式元件應用程式和大型企業應用程式。
+  - 後來由 Eclipse Foundation 接管並更名為 Jakarta EE。
+
+### 設置JDK(請簡介如何在電腦上設置JDK)
+- **安裝JDK**：
+  - **下載**：從 Oracle官網 或 OpenJDK 發行版 (如 Adoptium Temurin) 下載適合您 Windows 系統的 JDK 安裝程式 (通常是 x64 Installer)。
+  - **執行安裝**：執行下載的安裝檔，依照預設選項完成安裝 (路徑通常是 `C:\Program Files\Java\jdk-XX`)。
+  - **初步驗證**：開啟命令提示字元 (CMD)，輸入 `java -version` 和 `javac -version`，若顯示版本資訊則安裝初步成功。
+- **設定Windows環境變數**：
+  - **開啟設定**：搜尋「編輯系統環境變數」並開啟，點選「環境變數」。
+  - **設定 `JAVA_HOME`** (系統變數)：
+    - 新增變數：名稱 `JAVA_HOME`，值為 JDK 安裝路徑 (如 `C:\Program Files\Java\jdk-17`)。
+  - **設定 `Path`** (系統變數)：
+    - 編輯 `Path` 變數，新增一條 `%JAVA_HOME%\bin`。
+    - 確保此條目順序靠前，優先於其他可能的 Java 路徑。
+  - **驗證設定**：
+    - **重新開啟**命令提示字元。
+    - 輸入 `java -version`、`javac -version` 及 `echo %JAVA_HOME%` 進行確認。
+- **重點提示**：
+  - 不同作業系統設定方式不同。
+  - 若有多個 JDK 版本，確保 `Path` 指向預設版本。
+  - 手動設定 `JAVA_HOME` 有助於開發環境管理。
+
+
+### 如何編寫HelloWorld
+- **基本結構與檔案命名**：
+  - Java 程式碼通常組織在類別 (class) 中。一個基本的 Java 檔案包含一個公開類別 (public class)。
+  - 如果一個 Java 檔案中包含公開類別，則該檔案的名稱必須與公開類別的名稱完全相同，並且副檔名為 `.java`。
+    - 例如：如果公開類別是 `public class HelloWorld`，則檔案必須命名為 `HelloWorld.java`。
+- **`main` 方法 - 程式的進入點**：
+  - Java 應用程式的執行是從 `main` 方法開始的。JVM (Java 虛擬機器) 會尋找這個特定的方法來啟動程式。
+  - `main` 方法的標準寫法是：`public static void main(String[] args)`
+    - `public`: 存取修飾符，表示此方法可以從任何地方被呼叫。
+    - `static`:關鍵字，表示此方法屬於類別本身，而不是類別的某個實例。因此，JVM 可以直接呼叫它而無需先建立類別的物件。
+    - `void`: 回傳型別，表示此方法執行完畢後不回傳任何值。
+    - `main`: 方法的名稱，這是 JVM 規定的進入點名稱。
+    - `String[] args`: 方法的參數，它是一個字串陣列，用來接收從命令列傳遞給程式的參數。
+- **輸出文字到控制台**：
+  - 使用 `System.out.println("要輸出的文字");` 可以將指定的文字（或其他資料型別轉換後的字串）列印到標準輸出（通常是命令列視窗或終端機），並在結尾加上換行符。
+  - `System` 是 Java 標準函式庫中的一個類別。
+  - `out` 是 `System` 類別中的一個靜態成員變數，它是一個 `PrintStream` 物件，代表標準輸出串流。
+  - `println()` 是 `PrintStream` 類別中的一個方法。
+
+- **一個完整的 HelloWorld.java 範例**：
+  ```java
+  public class HelloWorld {
+      public static void main(String[] args) {
+          // 這行程式碼會在控制台輸出 "Hello, World!"
+          System.out.println("Hello, World!");
+      }
+  }
+  ```
+
+- **如何編譯與執行 (使用命令列)**：
+  - **編譯 (Compile)**：
+    1. 開啟命令提示字元 (Windows) 或終端機 (macOS/Linux)。
+    2. 使用 `cd` 指令切換到您的 `HelloWorld.java` 檔案所在的目錄。
+    3. 輸入編譯指令：`javac HelloWorld.java`
+       - 如果您的程式碼依賴了外部的 JAR 檔案 (函式庫)，您需要使用 `-cp` 或 `-classpath` 選項來指定類別路徑。例如：
+         `javac -cp "path/to/your/library.jar" HelloWorld.java` (Windows)
+         `javac -cp "path/to/your/library.jar:." HelloWorld.java` (macOS/Linux，注意 Unix-like 系統路徑分隔符是 `:`，`.` 代表目前目錄)
+         若有多個 JAR 或目錄，可以用分號 (Windows) 或冒號 (macOS/Linux) 分隔。
+    4. 如果程式碼沒有語法錯誤，編譯成功後會在同目錄下產生一個名為 `HelloWorld.class` 的位元組碼檔案。
+  - **執行 (Run)**：
+    1. 在相同的命令列視窗和目錄下。
+    2. 輸入執行指令：`java HelloWorld` (注意：執行時不需要加上 `.class` 副檔名)
+       - 同樣地，如果執行時需要用到外部函式庫，也需要使用 `-cp` 或 `-classpath` 選項。`java` 指令的 `-cp` 通常需要包含函式庫以及您的類別所在的目錄 (通常是 `.` 代表目前目錄)。例如：
+         `java -cp "path/to/your/library.jar;." HelloWorld` (Windows)
+         `java -cp "path/to/your/library.jar:." HelloWorld` (macOS/Linux)
+    3. 程式將會執行，並在命令列上輸出 "Hello, World!"。
+  - **Java 11+ 的單一檔案原始碼程式執行特性**：
+    - 從 Java 11 開始，您可以直接執行單一個 `.java` 原始碼檔案，而無需先手動使用 `javac` 編譯。
+    - 指令格式：`java YourSourceFile.java`
+    - 例如，對於 `HelloWorld.java`，您可以直接執行：`java HelloWorld.java`
+    - JVM 會在記憶體中編譯該檔案然後執行它，不會在磁碟上產生 `.class` 檔案。
+    - 這個特性主要用於快速執行簡單的指令碼或小型工具程式，對於包含多個檔案或需要複雜建置流程的專案，仍然建議使用傳統的編譯和執行方式或建置工具 (如 Maven, Gradle)。
+    - 如果單一檔案程式依賴外部函式庫，依然可以使用 `-cp` 選項：
+      `java -cp "path/to/library.jar" YourSourceFile.java`
+
+### Java的基本編寫規則
+- **陳述式 (Statements) 以分號結尾**：
+  - Java 中的每個完整指令或陳述式 (如變數宣告、方法呼叫、賦值等) 都必須以分號 (`;`) 結束。
+  - 例如：`int age = 30;` 或 `System.out.println("Hello");`
+- **程式碼區塊 (Code Blocks) 與大括號**：
+  - 類別 (class)、方法 (method) 以及流程控制結構 (如 `if`, `for`, `while` 等) 的主體都使用大括號 `{}` 來定義其範圍或程式碼區塊。
+  - 左大括號 `{` 表示區塊的開始，右大括號 `}` 表示區塊的結束。
+  - 例如：
+    ```java
+    public class MyClass {
+        public void myMethod() {
+            // 方法內的程式碼
+            if (condition) {
+                // if 區塊內的程式碼
+            }
+        }
+    }
+    ```
+- **大小寫敏感 (Case Sensitivity)**：
+  - Java 是大小寫敏感的程式語言。這意味著 `myVariable` 和 `MyVariable` 會被視為兩個不同的識別字 (identifier)。
+  - 關鍵字、類別名稱、方法名稱和變數名稱等都必須注意大小寫的正確性。
+- **識別字 (Identifiers) 的命名規則與慣例**：
+  - **規則**：
+    - 識別字可以由字母、數字、底線 (`_`) 和貨幣符號 (`$`) 組成。
+    - 識別字必須以字母、底線 (`_`) 或貨幣符號 (`$`) 開頭，不能以數字開頭。
+    - 識別字不能是 Java 的保留關鍵字 (如 `class`, `public`, `int` 等)。
+    - 識別字的長度沒有限制。
+  - **慣例 (Conventions)** - 雖然不強制，但強烈建議遵循以提高程式碼可讀性：
+    - **類別名稱 (Class Names)**：使用「帕斯卡命名法」(PascalCase)，即每個單字的首字母大寫。例如：`HelloWorld`, `MyFirstClass`。
+    - **方法名稱 (Method Names) 與變數名稱 (Variable Names)**：使用「駝峰式命名法」(camelCase)，即第一個單字的首字母小寫，後續單字的首字母大寫。例如：`calculateSum`, `userName`, `age`。
+    - **常數名稱 (Constant Names)**：所有字母大寫，單字之間用底線分隔。例如：`MAX_VALUE`, `PI`。
+    - **套件名稱 (Package Names)**：所有字母小寫，單字之間用點 (`.`) 分隔 (這通常反映目錄結構)。例如：`com.example.project`。
+- **註解 (Comments)**：
+  - 用於解釋程式碼，提高可讀性，編譯器會忽略註解。
+  - **單行註解**：以 `//` 開始，直到該行結束。
+    ```java
+    // 這是一條單行註解
+    int count = 0; // 這是另一條註解
+    ```
+  - **多行註解**：以 `/*` 開始，以 `*/` 結束，可以跨越多行。
+    ```java
+    /*
+     這是一條
+     多行註解。
+    */
+    ```
+  - **文件註解 (Javadoc Comments)**：以 `/**` 開始，以 `*/` 結束。用於產生 API 文件。
+    ```java
+    /**
+     * 這是一個文件註解的範例。
+     * @param name 使用者的名稱
+     * @return 問候語字串
+     */
+    public String greet(String name) {
+        return "Hello, " + name;
+    }
+    ```
+- **空白 (Whitespace)**：
+  - Java 編譯器會忽略程式碼中多餘的空白字元 (如空格、定位字元 Tab、換行符)。
+  - 適當使用空白和縮排可以極大地提高程式碼的可讀性。
+- **Java 關鍵字 (Keywords)**：
+  - Java 有一系列保留的關鍵字，這些字詞具有特殊意義，不能被用作識別字 (如類別名、變數名等)。
+  - 例如：`public`, `class`, `static`, `void`, `if`, `else`, `for`, `while`, `int`, `new` 等。
+- **存取修飾符 (Access Modifiers)**：
+  - 用於設定類別、方法、變數的可見性。
+  - 主要有：`public` (公開)、`protected` (保護)、`private` (私有)以及預設 (不加任何修飾符，也稱為 package-private)。
+- **類別與檔案的基本結構 (複習)**：
+  - 一個 `.java` 檔案中最多只能有一個 `public` 類別。
+  - 如果存在 `public` 類別，則檔案名稱必須與該 `public` 類別的名稱完全相同。
+  - 程式的進入點是 `public static void main(String[] args)` 方法。
