@@ -8,4 +8,4 @@ order: 4
 {: .prompt-tip } -->
 
 
-## An Java Developer
+- A Java Developer that reasearch on AI and LLM.
