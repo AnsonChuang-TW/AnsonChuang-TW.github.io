@@ -8,4 +8,4 @@ order: 4
 {: .prompt-tip } -->
 
 
-- A Java Developer that reasearch on AI and LLM.
+- 資展國際EEIT02跨域JAVA軟體工程師就業養成班 [專案影片](https://youtu.be/mtpYc-Zbq9U?si=9L49DyEDN0LgI11w&t=8788)
